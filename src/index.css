@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  color: #143047;
+  background: #fffaf4;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --white: #ffffff;
+  --cream: #fffaf4;
+  --cream-soft: #fff3e9;
+  --orange: #ff865c;
+  --orange-dark: #d75c34;
+  --teal: #24b8a6;
+  --blue: #74b9d9;
+  --ink: #143047;
+  --muted: #627689;
+  --line: #edf0ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 5% 8%, rgba(255, 188, 141, 0.2), transparent 34rem),
+    radial-gradient(circle at 100% 12%, rgba(36, 184, 166, 0.16), transparent 34rem),
+    linear-gradient(180deg, #fffaf4 0%, #ffffff 46%, #fffaf4 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: #ffd5c3;
+  color: #143047;
+}
+
+.section-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: 88px;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding-block: 64px;
+  }
+}
+
+.heading-font {
+  font-family: "Times New Roman", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+}
+
+.display-title {
+  max-width: 720px;
+  color: #143047;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(2.75rem, 5.6vw, 5.6rem);
+  font-weight: 600;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.section-title {
+  max-width: 760px;
+  color: #143047;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(2.15rem, 4.3vw, 4.15rem);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.page-title {
+  max-width: 860px;
+  color: #143047;
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.section-lead {
+  max-width: 700px;
+  margin-top: 20px;
+  color: #627689;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(36, 184, 166, 0.28);
+  border-radius: 999px;
+  background: rgba(232, 255, 251, 0.78);
+  padding: 8px 13px;
+  color: #08796f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ff865c 0%, #e7a743 36%, #24b8a6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.soft-card {
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 22px 70px rgba(20, 48, 71, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.form-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid #e8efe9;
+  background: #ffffff;
+  padding: 0.85rem 1rem;
+  color: #143047;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-field:focus {
+  border-color: #ff865c;
+  box-shadow: 0 0 0 4px rgba(255, 134, 92, 0.1);
+}
+
+.form-field::placeholder {
+  color: #9aa9b3;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.float-soft {
+  animation: floatSoft 7s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.marquee-track {
+  animation: marquee 34s linear infinite;
+}
+
+.banner-fade {
+  animation: bannerFade 0.9s ease both;
+}
+
+.header-decoration-line {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 134, 92, 0.9),
+    rgba(231, 167, 67, 0.9),
+    rgba(36, 184, 166, 0.9)
+  );
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-16px) rotate(1.5deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bannerFade {
+  from {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
