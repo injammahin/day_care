@@ -12,7 +12,11 @@ import {
   Sun,
   Users,
 } from "lucide-react"
-
+import gruppenbesuch from "@/assets/img/gruppenbesuch.webp"
+import overnightCareImg from "@/assets/img/Overnight-Care.webp"
+import kindergartenImg from "@/assets/img/Kindergarten Readiness Academy.webp"
+import homeschoolImg from "@/assets/img/Homeschool-Enrichment.webp"
+import dropInCareImg from "@/assets/img/Drop-In-Care.webp"
 export const siteConfig = {
   logo: "/images/logo1.png",
   name: "Flexible Learning and Care Solutions",
@@ -98,8 +102,7 @@ export const heroSlides = [
     eyebrow: "Learning through discovery",
     title: "A warm place to learn, play, and grow.",
     text: "Age-appropriate programs help children build confidence, creativity, communication, and early learning skills.",
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=85",
+    image: gruppenbesuch,
   },
   {
     eyebrow: "Support for real schedules",
@@ -123,136 +126,75 @@ export const trustItems = [
 
 export const programs = [
   {
-    id: "infants",
-    icon: Baby,
-    title: "Infants",
-    age: "6 Weeks - 18 Months",
-    seoTitle: "Infant Care in Kemah, TX",
-    image:
-      "https://images.unsplash.com/photo-1546015720-b8b30df5aa27?auto=format&fit=crop&w=1200&q=85",
+    id: "overnight-care",
+    icon: HeartHandshake,
+    title: "Overnight Care",
+    age: "Ages 6 Months - 12 Years",
+    seoTitle: "Overnight Childcare in Kemah, TX",
+    image: overnightCareImg,
     summary:
-      "A nurturing environment where babies feel safe, loved, and supported through gentle routines, sensory exploration, and caregiver connection.",
+      "Safe, nurturing overnight care for infants, toddlers, preschoolers, and school-age children.",
     longText:
-      "Our infant care program is designed for warmth, responsiveness, and trust. Babies need gentle care, steady routines, and close communication between caregivers and families. The program supports early sensory development, comfort, bonding, and daily rhythm while keeping parents informed.",
+      "Flexible Learning Solutions offers safe, nurturing overnight care for infants, toddlers, preschoolers, and school-age children. Whether parents work night shifts, extended hours, or simply need dependable care, children enjoy a comforting evening routine, supervised sleep, and a calm, home-like environment.",
     bullets: [
-      "Gentle routines and responsive care",
-      "Sensory discovery and early development",
-      "Warm caregiver connection",
-      "Parent communication and daily updates",
+      "Designed for families who need evening or overnight childcare support",
+      "Children enjoy a calm, home-like environment with supervised rest",
+      "Helpful for night shifts, extended work hours, or dependable backup care",
+      "Available based on age group, registration, staffing, and space",
     ],
   },
   {
-    id: "toddlers",
-    icon: Sparkles,
-    title: "Toddlers",
-    age: "18 Months - 3 Years",
-    seoTitle: "Toddler Care in Kemah, TX",
-    image:
-      "https://images.unsplash.com/photo-1564429238817-393bd4286b2d?auto=format&fit=crop&w=1200&q=85",
-    summary:
-      "A playful program for curious learners, supporting movement, language growth, independence, and social development.",
-    longText:
-      "Toddlers learn by moving, touching, talking, singing, and exploring. This program supports independence, social-emotional growth, early language, creative play, and helpful routines. Potty training support can be aligned with each family through consistency and communication.",
-    bullets: [
-      "Active play and movement",
-      "Language and social growth",
-      "Creative hands-on activities",
-      "Potty training support with family communication",
-    ],
-  },
-  {
-    id: "pre-k1",
+    id: "kindergarten-readiness",
     icon: BookOpen,
-    title: "Pre-K1",
-    age: "3-Year-Olds",
-    seoTitle: "Pre-K1 Program in Kemah, TX",
-    image:
-      "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1200&q=85",
+    title: "Kindergarten Readiness Academy",
+    age: "Designed for 5-Year-Olds",
+    seoTitle: "Kindergarten Readiness Program in Kemah, TX",
+    image: kindergartenImg,
     summary:
-      "A balanced program that encourages creativity, confidence, communication, friendship, manners, and early learning concepts.",
+      "A focused readiness program for children preparing for kindergarten success.",
     longText:
-      "The Pre-K1 program helps three-year-olds build confidence, friendships, communication, manners, and early learning habits. Children explore ideas through play, creative activities, group learning, stories, music, and guided experiences.",
+      "Our Kindergarten Readiness Academy is ideal for children who missed the kindergarten cutoff date or would benefit from an additional year in a smaller, more personalized learning environment. Through hands-on instruction, children build confidence in early reading, writing, math, and social-emotional skills to ensure they are fully prepared for kindergarten success.",
     bullets: [
-      "Creative projects and early learning",
-      "Friendship and social confidence",
-      "Communication and manners",
-      "Play-based discovery",
+      "Supports early reading, writing, math, and classroom readiness",
+      "Ideal for children who missed the kindergarten cutoff date",
+      "Smaller, more personalized learning environment",
+      "Builds confidence, independence, and social-emotional skills",
     ],
   },
   {
-    id: "pre-k2",
-    icon: Star,
-    title: "Pre-K2",
-    age: "4 - 5 Years",
-    seoTitle: "Pre-K2 and Kindergarten Readiness in Kemah, TX",
-    image:
-      "https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=85",
+    id: "homeschool-enrichment",
+    icon: Sparkles,
+    title: "Homeschool Enrichment Program",
+    age: "For Homeschool Families",
+    seoTitle: "Homeschool Enrichment Program in Kemah, TX",
+    image: homeschoolImg,
     summary:
-      "A kindergarten-readiness program focused on early academics, collaboration, problem-solving, confidence, and meaningful play.",
+      "A welcoming learning space for homeschool children to explore, create, and grow.",
     longText:
-      "Pre-K2 supports kindergarten readiness through early literacy, numbers, problem-solving, collaboration, classroom routines, fine motor practice, and confidence building. The goal is to help children feel prepared, curious, and capable.",
+      "Our Homeschool Support Program provides a welcoming and engaging learning space where children can explore, create, and grow alongside peers. Guided by experienced educators, students participate in hands-on activities that encourage curiosity, creativity, and individualized learning.",
     bullets: [
-      "Early literacy and math readiness",
-      "Problem-solving and collaboration",
-      "Confidence and classroom routines",
-      "Hands-on learning experiences",
+      "Provides a structured enrichment option for homeschool families",
+      "Encourages curiosity, creativity, and hands-on learning",
+      "Gives children the opportunity to learn and socialize with peers",
+      "Guided by experienced educators in a supportive environment",
     ],
   },
   {
-    id: "school-age",
-    icon: Users,
-    title: "School Age",
-    age: "5 - 12 Years",
-    seoTitle: "School Age Care in Kemah, TX",
-    image:
-      "https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=1200&q=85",
+    id: "drop-in-care",
+    icon: CalendarCheck,
+    title: "Drop-In Care",
+    age: "Flexible Care When You Need It Most",
+    seoTitle: "Drop-In Childcare in Kemah, TX",
+    image: dropInCareImg,
     summary:
-      "Before and after school care that blends homework support, creative activities, relaxation time, and safe supervision.",
+      "Flexible childcare support for unexpected appointments, errands, or changing schedules.",
     longText:
-      "The school-age program gives children a safe place to relax, complete homework, enjoy creative activities, and connect with peers before or after school. Transportation details should be added only after the client confirms school pickup or drop-off arrangements.",
+      "Life does not always follow a schedule. Our drop-in care option offers families convenient, high-quality childcare on an as-needed basis, providing peace of mind whenever unexpected appointments, errands, or work commitments arise.",
     bullets: [
-      "Homework support",
-      "Creative and group activities",
-      "Relaxation after school",
-      "Safe, supervised environment",
-    ],
-  },
-  {
-    id: "summer-camp",
-    icon: Sun,
-    title: "Summer Camp",
-    age: "Seasonal Program",
-    seoTitle: "Summer Camp in Kemah, TX",
-    image:
-      "https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1200&q=85",
-    summary:
-      "A summer experience with creativity, activity, projects, weekly themes, friendships, and guided discovery.",
-    longText:
-      "Summer camp keeps children active, curious, and connected through creative projects, weekly themes, group activities, and fun learning experiences. Field trips or special activities should only be listed after confirmation.",
-    bullets: [
-      "Weekly themes",
-      "Creative projects",
-      "Active summer fun",
-      "Friendship and discovery",
-    ],
-  },
-  {
-    id: "flexible-care",
-    icon: Clock,
-    title: "Flexible & Drop-In Care",
-    age: "Subject to Availability",
-    seoTitle: "Flexible and Drop-In Childcare in Kemah, TX",
-    image:
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=85",
-    summary:
-      "Care designed around real family schedules, including drop-in, evening, overnight, weekend, and 7-day support options when available.",
-    longText:
-      "Flexible care is one of the strongest differentiators for this center. Families may need care outside traditional schedules because of work, emergencies, appointments, or changing routines. Availability should always be confirmed based on age group, staffing, registration, and space.",
-    bullets: [
-      "Drop-in care options",
-      "Evening and overnight care inquiries",
-      "Weekend and 7-day support inquiries",
-      "Subject to availability and registration",
+      "Convenient childcare for unexpected schedule changes",
+      "Helpful for appointments, errands, work needs, or backup care",
+      "Available as an as-needed option based on center availability",
+      "A flexible option for families who need dependable short-term care",
     ],
   },
 ]

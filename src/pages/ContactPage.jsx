@@ -133,7 +133,7 @@ export default function ContactPage() {
 
 function ContactCard({ icon: Icon, title, text, href }) {
   const content = (
-    <div className="flex items-center gap-4 rounded-[2rem] bg-white p-5 shadow-[0_14px_45px_rgba(20,48,71,0.06)] transition hover:-translate-y-1">
+    <div className="flex items-center mb-3 gap-4 rounded-[2rem] bg-white p-5 shadow-[0_14px_45px_rgba(20,48,71,0.06)] transition hover:-translate-y-1">
       <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#fff4ec] text-[#ff865c]">
         <Icon size={22} />
       </span>

@@ -13,7 +13,10 @@ import {
   Sparkles,
   Star,
 } from "lucide-react"
-
+import overnightCareImg from "@/assets/img/Overnight-Care.webp"
+import Kindergarten from "@/assets/img/Kindergarten Readiness Academy.webp"
+import Homeschool from "@/assets/img/Homeschool-Enrichment.webp"
+import DropInCare from "@/assets/img/Drop-In-Care.webp"
 import Seo from "@/components/Seo"
 import CTASection from "@/components/CTASection"
 import { Accordion } from "@/components/ui/accordion"
@@ -287,79 +290,163 @@ function TrustStrip() {
 }
 
 function ProgramsPreview() {
+  const homePrograms = [
+    {
+      id: "overnight-care",
+      title: "Overnight Care",
+      subtitle: "Ages 6 Months-12 Years",
+      description:
+        "Flexible Learning Solutions offers safe, nurturing overnight care for infants, toddlers, preschoolers, and school-age children. Whether parents work night shifts, extended hours, or simply need dependable care, children enjoy a comforting evening routine, supervised sleep, and a calm, home-like environment.",
+      image: overnightCareImg,
+      icon: HeartHandshake,
+      badge: "Evening & Overnight Support",
+    },
+    {
+      id: "kindergarten-readiness",
+      title: "Kindergarten Readiness Academy",
+      subtitle: "Designed for 5-Year-Olds",
+      description:
+        "Our Kindergarten Readiness Academy is ideal for children who missed the kindergarten cutoff date or would benefit from an additional year in a smaller, more personalized learning environment. Through hands-on instruction, children build confidence in early reading, writing, math, and social-emotional skills to ensure they are fully prepared for kindergarten success.",
+      image: Kindergarten,
+      icon: BookOpen,
+      badge: "Early Learning Preparation",
+    },
+    {
+      id: "homeschool-enrichment",
+      title: "Homeschool Enrichment Program",
+      subtitle: "For Homeschool Families",
+      description:
+        "Our Homeschool Support Program provides a welcoming and engaging learning space where children can explore, create, and grow alongside peers. Guided by experienced educators, students participate in hands-on activities that encourage curiosity, creativity, and individualized learning.",
+      image: Homeschool,
+      icon: Sparkles,
+      badge: "Creative Learning Space",
+    },
+    {
+      id: "drop-in-care",
+      title: "Drop-In Care",
+      subtitle: "Flexible Care When You Need It Most",
+      description:
+        "Life does not always follow a schedule. Our drop-in care option offers families convenient, high-quality childcare on an as-needed basis, providing peace of mind whenever unexpected appointments, errands, or work commitments arise.",
+      image: DropInCare,
+      icon: CalendarCheck,
+      badge: "As-Needed Childcare",
+    },
+  ]
+
   return (
-    <section className="section-pad">
-      <div className="section-shell">
-        <div className="reveal flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <div>
-            <span className="section-kicker">
-              <BookOpen size={15} />
-              Age-Based Programs
-            </span>
-            <h2 className="section-title">
-              Clear programs for every stage of childhood.
-            </h2>
-          </div>
+    <section className="relative overflow-hidden bg-[#fffaf4] py-20 lg:py-28">
+      <div className="pointer-events-none absolute left-[-8rem] top-12 size-72 rounded-full bg-[#b7f3ea]/45 blur-3xl" />
+      <div className="pointer-events-none absolute right-[-9rem] top-32 size-80 rounded-full bg-[#ffd6c2]/55 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-9rem] left-1/2 size-96 -translate-x-1/2 rounded-full bg-[#fff0d8]/70 blur-3xl" />
 
-          <div>
-            <p className="max-w-lg text-base leading-8 text-[#627689]">
-              From infants to school-age children, each program supports safety,
-              confidence, creativity, social growth, and age-appropriate
-              learning.
-            </p>
+      <div className="section-shell relative z-10">
+        <div className="reveal mx-auto max-w-4xl text-center">
+          <span className="section-kicker mx-auto">
+            <BookOpen size={15} />
+            Our Programs
+          </span>
 
-            <Link
-              to="/programs"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#d75c34]"
-            >
-              View all programs
-              <ArrowRight size={16} />
-            </Link>
-          </div>
+          <h2 className="section-title mx-auto mt-5">
+            Clear programs for every stage of childhood.
+          </h2>
+
+          <p className="section-lead mx-auto">
+            Supportive care options for overnight needs, kindergarten readiness,
+            homeschool enrichment, and flexible drop-in childcare.
+          </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {programs.slice(0, 6).map((program, index) => {
+        <div className="mt-12 overflow-hidden rounded-[2.6rem] border border-[#ffe1d2] bg-white/80 shadow-[0_24px_80px_rgba(20,48,71,0.08)] backdrop-blur-xl">
+          {homePrograms.map((program, index) => {
             const Icon = program.icon
+            const isReverse = index % 2 === 1
 
             return (
-              <Card
+              <div
                 key={program.id}
-                className="reveal group overflow-hidden transition duration-500 hover:-translate-y-2 hover:shadow-[0_28px_80px_rgba(20,48,71,0.13)]"
-                style={{ transitionDelay: `${index * 60}ms` }}
+                className="reveal border-b border-[#e9eeee] p-5 last:border-b-0 md:p-7 lg:p-8"
+                style={{ transitionDelay: `${index * 70}ms` }}
               >
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={program.image}
-                    alt={`${program.title} childcare program`}
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#143047]/52 to-transparent" />
+                <div className="grid gap-7 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                  <div
+                    className={`group relative h-[320px] overflow-hidden rounded-[2.2rem] border border-white bg-[#f8fbfb] shadow-[0_18px_55px_rgba(20,48,71,0.1)] md:h-[390px] ${isReverse ? "lg:order-2" : ""
+                      }`}
+                  >
+                    <img
+                      src={program.image}
+                      alt={`${program.title} childcare program`}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    />
 
-                  <div className="absolute left-5 top-5 grid size-13 place-items-center rounded-2xl bg-white text-[#ff865c] shadow-lg">
-                    <Icon size={24} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#143047]/60 via-[#143047]/8 to-transparent" />
+
+                    <div className="absolute left-5 top-5 flex items-center gap-3">
+                      <span className="grid size-12 place-items-center rounded-2xl bg-white text-[#ff865c] shadow-[0_12px_35px_rgba(20,48,71,0.16)]">
+                        <Icon size={23} />
+                      </span>
+
+                      <Badge variant="teal">{program.badge}</Badge>
+                    </div>
+
+                    <div className="absolute bottom-5 left-5 right-5">
+                      <p className="heading-font text-[12px] font-semibold uppercase tracking-[0.18em] text-white/75">
+                        Program 0{index + 1}
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="absolute bottom-5 left-5 right-5">
-                    <Badge variant="teal">{program.age}</Badge>
+                  <div className={`${isReverse ? "lg:order-1" : ""}`}>
+                    <div className="mb-5 flex items-center gap-3">
+                      <span className="grid size-11 place-items-center rounded-full bg-[#fff4ec] text-sm font-bold text-[#ff865c]">
+                        0{index + 1}
+                      </span>
+
+                      <span className="h-px flex-1 bg-[#e9eeee]" />
+                    </div>
+
+                    <p className="mb-4 heading-font text-[12px] font-semibold uppercase tracking-[0.2em] text-[#24b8a6]">
+                      {program.subtitle}
+                    </p>
+
+                    <h3 className="heading-font max-w-3xl text-[clamp(2rem,4vw,4.2rem)] leading-[1.02] tracking-[-0.045em] text-[#143047]">
+                      {program.title}
+                    </h3>
+
+                    <p className="mt-6 max-w-3xl text-base leading-8 text-[#627689] md:text-[17px]">
+                      {program.description}
+                    </p>
+
+                    <div className="mt-7 flex flex-wrap gap-2">
+                      {["Safe Care", "Flexible Support", "Child Growth"].map(
+                        (item) => (
+                          <span
+                            key={item}
+                            className="rounded-full border border-[#d9f3ef] bg-[#f2fffc] px-4 py-2 text-xs font-semibold text-[#158477]"
+                          >
+                            {item}
+                          </span>
+                        )
+                      )}
+                    </div>
+
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                      <Button asChild size="lg">
+                        <Link to={`/programs#${program.id}`}>
+                          Learn More
+                          <ArrowRight size={17} />
+                        </Link>
+                      </Button>
+
+                      <Button asChild variant="secondary" size="lg">
+                        <Link to="/contact">
+                          Ask About This Program
+                          <MessageCircle size={17} />
+                        </Link>
+                      </Button>
+                    </div>
                   </div>
                 </div>
-
-                <CardHeader>
-                  <CardTitle>{program.title}</CardTitle>
-                  <CardDescription>{program.summary}</CardDescription>
-                </CardHeader>
-
-                <CardContent>
-                  <Link
-                    to={`/programs#${program.id}`}
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#d75c34]"
-                  >
-                    Learn More
-                    <ArrowRight size={16} />
-                  </Link>
-                </CardContent>
-              </Card>
+              </div>
             )
           })}
         </div>
