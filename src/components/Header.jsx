@@ -100,7 +100,7 @@ export default function Header() {
 
             <Link to="/contact">
               <Button asChild size="sm" className="px-5">
-                <span>
+                <span className="flex items-center gap-2">
                   Schedule a Tour
                   <ArrowRight size={15} />
                 </span>
