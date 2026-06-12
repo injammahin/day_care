@@ -1,6 +1,7 @@
 import React from "react"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+
 import {
   ArrowRight,
   BookOpen,
@@ -226,7 +227,7 @@ function Hero() {
             <img
               key={slide.image}
               src={slide.image}
-              alt="Children learning and playing in a childcare setting"
+              alt="Overnight care program for toddlers at daycare in Kemah TX"
               className="banner-fade h-[570px] w-full object-cover"
             />
 
@@ -649,6 +650,64 @@ function ParentToolsPreview() {
                   </Button>
                 </Link>
               </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+const reviews = [
+  {
+    name: "Sarah M.",
+    rating: 5,
+    text: "Flexible Learning and Care Solutions is amazing! My toddler feels safe, happy, and engaged every day. The staff is incredibly caring.",
+  },
+  {
+    name: "James L.",
+    rating: 5,
+    text: "I love the flexibility offered. Overnight and drop-in care have been lifesavers for my work schedule. Highly recommend for families in Kemah, TX!",
+  },
+  {
+    name: "Emily R.",
+    rating: 5,
+    text: "Our preschooler has thrived here. The learning programs are thoughtful, creative, and age-appropriate. The staff communicates very well with parents.",
+  },
+  {
+    name: "Daniel P.",
+    rating: 5,
+    text: "A warm, nurturing environment with excellent programs. I feel confident leaving my child in their care. Truly a parent-friendly daycare!",
+  },
+]
+
+function ReviewsSection() {
+  return (
+    <section className="section-pad bg-[#fffaf4]">
+      <div className="section-shell max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="section-title">What Parents Are Saying</h2>
+          <p className="mt-3 text-base text-[#627689] max-w-2xl mx-auto">
+            Real feedback from families in Kemah, TX who trust Flexible Learning and Care Solutions.
+          </p>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {reviews.map((review, index) => (
+            <Card
+              key={review.name}
+              className="p-6 rounded-[2rem] shadow-[0_18px_50px_rgba(20,48,71,0.1)] bg-white transition hover:-translate-y-1 hover:shadow-[0_22px_65px_rgba(20,48,71,0.15)]"
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <div className="flex items-center gap-2 mb-3">
+                {Array.from({ length: review.rating }).map((_, i) => (
+                  <Star key={i} size={18} className="text-[#ffb74d]" />
+                ))}
+              </div>
+
+              <p className="text-sm text-[#627689]">{review.text}</p>
+
+              <p className="mt-4 font-semibold text-[#143047]">- {review.name}</p>
             </Card>
           ))}
         </div>
