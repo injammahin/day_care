@@ -26,7 +26,7 @@ export const siteConfig = {
   baseUrl: "https://www.flexiblelearningcaresolutions.com",
   phone: "832-890-9665",
   phoneHref: "tel:8328909665",
-  email: "To be provided by client",
+  email: "jessica.abii@yahoo.com",
   address: "2020 Anders Lane, Kemah, TX 77565",
   streetAddress: "2020 Anders Lane",
   city: "Kemah",
