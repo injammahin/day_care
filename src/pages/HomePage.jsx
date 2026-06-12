@@ -187,7 +187,7 @@ function Hero() {
 
           <div className="mt-8 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
             {[
-              ["6w-12y", "Age Range"],
+              ["6mo-12y", "Age Range"],
               ["7 Days", "Support"],
               ["Drop-In", "Option"],
               ["NCI", "Accepted"],

@@ -17,6 +17,7 @@ import overnightCareImg from "@/assets/img/Overnight-Care.webp"
 import kindergartenImg from "@/assets/img/Kindergarten Readiness Academy.webp"
 import homeschoolImg from "@/assets/img/Homeschool-Enrichment.webp"
 import dropInCareImg from "@/assets/img/Drop-In-Care.webp"
+import playBaseLearning from "@/assets/img/Play-Based-Learning-2023-18.webp"
 export const siteConfig = {
   logo: "/images/logo1.png",
   name: "Flexible Learning and Care Solutions",
@@ -249,7 +250,7 @@ export const galleryImages = [
     title: "Group activities",
   },
   {
-    src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85",
+    src: playBaseLearning,
     title: "Play-based learning",
   },
 ]
