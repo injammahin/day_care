@@ -9,10 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "latest",
     "@vitejs/plugin-react": "latest",
     "clsx": "latest",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "lucide-react": "latest",
+    "nodemailer": "^8.0.11",
     "react": "latest",
     "react-dom": "latest",
     "react-helmet-async": "latest",
@@ -20,6 +24,5 @@
     "tailwind-merge": "latest",
     "tailwindcss": "latest",
     "vite": "latest"
-  },
-  "devDependencies": {}
+  }
 }

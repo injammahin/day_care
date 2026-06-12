@@ -1,12 +1,11 @@
-import React from "react"
-import { useState } from "react"
-import { ArrowRight } from "lucide-react"
-
-import { programs } from "@/data/siteData"
-import { Button } from "@/components/ui/button"
+import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { programs } from "@/data/siteData";
+import { Button } from "@/components/ui/button";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
-  const [formStatus, setFormStatus] = useState("")
+  const [formStatus, setFormStatus] = useState("");
   const [formData, setFormData] = useState({
     parentName: "",
     phone: "",
@@ -18,7 +17,7 @@ export default function ContactForm() {
     message: "",
     consent: false,
     company: "",
-  })
+  });
 
   const scheduleOptions = [
     "Full-time care",
@@ -29,23 +28,20 @@ export default function ContactForm() {
     "Weekend care",
     "School age care",
     "Summer camp",
-  ]
+  ];
 
   const handleChange = (event) => {
-    const { name, value, checked, type } = event.target
-
+    const { name, value, checked, type } = event.target;
     setFormData((current) => ({
       ...current,
       [name]: type === "checkbox" ? checked : value,
-    }))
-  }
+    }));
+  };
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    if (formData.company) {
-      return
-    }
+    if (formData.company) return; // spam honeypot
 
     if (
       !formData.parentName ||
@@ -57,17 +53,52 @@ export default function ContactForm() {
     ) {
       setFormStatus(
         "Please complete the required fields and accept the consent checkbox."
-      )
-      return
+      );
+      return;
     }
 
-    setFormStatus(
-      "Thank you. This demo form is ready. Connect it to Laravel API, Web3Forms, Formspree, or another email service before launch."
-    )
-  }
+    try {
+      // Send via EmailJS using your SMTP service & template
+      await emailjs.send(
+        "service_effpgh6",       // your SMTP service ID
+        "template_7g9ah5g",      // your EmailJS template ID
+        {
+          parentName: formData.parentName,
+          phone: formData.phone,
+          email: formData.email,
+          childAge: formData.childAge,
+          program: formData.program,
+          scheduleNeed: formData.scheduleNeed,
+          preferredDate: formData.preferredDate,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+          year: new Date().getFullYear(),
+        },
+        "ou_43JNABOUuzliYG"        // your EmailJS public key
+      );
+
+      setFormStatus("Thank you! Your form has been submitted successfully.");
+      setFormData({
+        parentName: "",
+        phone: "",
+        email: "",
+        childAge: "",
+        program: "",
+        scheduleNeed: "",
+        preferredDate: "",
+        message: "",
+        consent: false,
+        company: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setFormStatus("Oops! Something went wrong. Please try again later.");
+    }
+  };
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-4">
+      {/* Honeypot to block spam */}
       <input
         type="text"
         name="company"
@@ -185,7 +216,6 @@ export default function ContactForm() {
           onChange={handleChange}
           className="mt-1 size-4 accent-[#ff865c]"
         />
-
         <span className="text-sm font-medium leading-6 text-[#627689]">
           I agree that Flexible Learning and Care Solutions may contact me about
           my inquiry. Please do not submit sensitive child records through this
@@ -204,7 +234,7 @@ export default function ContactForm() {
         <ArrowRight size={17} />
       </Button>
     </form>
-  )
+  );
 }
 
 function Field({ label, children }) {
@@ -213,5 +243,5 @@ function Field({ label, children }) {
       <span className="text-sm font-semibold text-[#143047]">{label}</span>
       {children}
     </label>
-  )
+  );
 }
