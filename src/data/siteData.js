@@ -19,7 +19,7 @@ import homeschoolImg from "@/assets/img/Homeschool-Enrichment.webp"
 import dropInCareImg from "@/assets/img/Drop-In-Care.webp"
 import playBaseLearning from "@/assets/img/Play-Based-Learning-2023-18.webp"
 export const siteConfig = {
-  logo: "/images/logo1.png",
+  logo: "/images/logo-1.png",
   name: "Flexible Learning and Care Solutions",
   shortName: "Flexible Learning",
   tagline: "Care Solutions",

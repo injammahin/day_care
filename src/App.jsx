@@ -10,12 +10,14 @@ import AboutPage from "@/pages/AboutPage"
 import ProgramsPage from "@/pages/ProgramsPage"
 import TuitionPage from "@/pages/TuitionPage"
 import ContactPage from "@/pages/ContactPage"
+import LaunchBanner from "@/components/LaunchBanner"
 
 export default function App() {
   return (
     <div className="min-h-screen bg-[#fffaf4] text-[#143047]">
       <ScrollToTop />
       <Header />
+      <LaunchBanner />
 
       <main>
         <Routes>
