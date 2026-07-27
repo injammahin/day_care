@@ -17,7 +17,8 @@ export default function Header() {
   const [isHidden, setIsHidden] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const lastScrollY = useRef(0)
-
+  const ENROLLMENT_FORM_URL =
+        "https://schools.mybrightwheel.com/sign-in?redirect_path=forms/181f0acb-dcd0-4e1e-ba60-dcbd08e0d094/self-service"
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY
@@ -98,14 +99,19 @@ export default function Header() {
               </Button>
             </a>
 
-            <Link to="/contact">
+            <a>
               <Button asChild size="sm" className="px-5">
-                <span className="flex items-center gap-2">
-                  Schedule a Tour
+                <a
+                  href={ENROLLMENT_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  Enroll Now
                   <ArrowRight size={15} />
-                </span>
+                </a>
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -196,11 +202,22 @@ export default function Header() {
                   </Button>
                 </a>
 
-                <Link to="/contact" onClick={closeMenu}>
+                <a
+                  href={ENROLLMENT_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button asChild className="w-full">
-                    <span>Tour</span>
+                    <a
+                      href={ENROLLMENT_FORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={closeMenu}
+                    >
+                      Enroll Now
+                    </a>
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
