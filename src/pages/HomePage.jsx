@@ -727,13 +727,11 @@ function GalleryPreview() {
           </span>
 
           <h2 className="section-title mx-auto">
-            Modern visual banners ready for real daycare photos.
+            A closer look at the spaces where children learn, play, and grow.
           </h2>
 
           <p className="section-lead mx-auto">
-            These are free placeholder-style images. Replace them later with
-            real facility, classroom, playground, and activity photos after
-            permission is confirmed.
+            Explore our classrooms, learning areas, activity spaces, and caring environment designed to help every child feel safe, supported, and inspired.
           </p>
         </div>
 
@@ -757,7 +755,7 @@ function GalleryPreview() {
                   {image.title}
                 </p>
                 <p className="mt-1 text-sm font-medium text-white/80">
-                  Replace with approved photo
+                  {image.description}
                 </p>
               </div>
             </div>

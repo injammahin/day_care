@@ -238,20 +238,24 @@ export const safetyItems = [
 
 export const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=85",
-    title: "Creative learning spaces",
+    src: "/images/1.jpeg",
+    title: "Colorful Learning Classroom",
+    description: "A bright, welcoming space designed for learning, creativity, and play.",
   },
   {
-    src: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1000&q=85",
-    title: "Hands-on discovery",
+    src: "/images/2.jpeg",
+    title: "Imaginative Play Area",
+    description: "A cheerful pretend-play space where children explore and build social skills.",
   },
   {
-    src: "https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?auto=format&fit=crop&w=1000&q=85",
-    title: "Group activities",
+    src: "/images/3.jpeg",
+    title: "Reading and Literacy Center",
+    description: "An organized reading area that encourages curiosity and a love of books.",
   },
   {
-    src: playBaseLearning,
-    title: "Play-based learning",
+    src: "/images/4.jpeg",
+    title: "Cozy Play Corner",
+    description: "A comfortable play area filled with colorful toys and child-friendly activities.",
   },
 ]
 

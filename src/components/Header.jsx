@@ -35,32 +35,48 @@ export default function Header() {
    * Add Tuition & Rates immediately after Programs.
    * If it already exists in siteData, it will not be duplicated.
    */
-  const headerNavItems = useMemo(() => {
-    const tuitionAlreadyExists = navItems.some(
-      (item) =>
-        item.href === TUITION_NAV_ITEM.href ||
-        item.label.toLowerCase() ===
-          TUITION_NAV_ITEM.label.toLowerCase()
+const headerNavItems = useMemo(() => {
+  /*
+   * Remove the old Tuition menu item and prevent duplicates.
+   */
+  const cleanedNavItems = navItems.filter((item) => {
+    const normalizedLabel = item.label
+      .trim()
+      .toLowerCase()
+
+    const normalizedHref = item.href
+      .trim()
+      .toLowerCase()
+
+    return (
+      normalizedLabel !== "tuition" &&
+      normalizedLabel !== "tuition & rates" &&
+      normalizedHref !== "/tuition" &&
+      normalizedHref !== "/tuition-rates"
     )
+  })
 
-    if (tuitionAlreadyExists) {
-      return navItems
-    }
+  const programsIndex = cleanedNavItems.findIndex(
+    (item) =>
+      item.label.trim().toLowerCase() === "programs"
+  )
 
-    const programsIndex = navItems.findIndex(
-      (item) => item.label.toLowerCase() === "programs"
-    )
-
-    if (programsIndex === -1) {
-      return [...navItems, TUITION_NAV_ITEM]
-    }
-
+  /*
+   * Add Tuition & Rates after Programs.
+   */
+  if (programsIndex === -1) {
     return [
-      ...navItems.slice(0, programsIndex + 1),
+      ...cleanedNavItems,
       TUITION_NAV_ITEM,
-      ...navItems.slice(programsIndex + 1),
     ]
-  }, [])
+  }
+
+  return [
+    ...cleanedNavItems.slice(0, programsIndex + 1),
+    TUITION_NAV_ITEM,
+    ...cleanedNavItems.slice(programsIndex + 1),
+  ]
+}, [])
 
   useEffect(() => {
     const handleScroll = () => {
