@@ -35,7 +35,7 @@ export const siteConfig = {
   country: "US",
   latitude: "",
   longitude: "",
-  ageRange: "6 weeks to 12 years",
+  ageRange: "1 year to 12 years",
   mapEmbed:
     "https://www.google.com/maps?q=2020%20Anders%20Lane,%20Kemah,%20TX%2077565&output=embed",
 }
@@ -52,7 +52,7 @@ export const seoPages = {
   home: {
     title: "Daycare in Kemah, TX | Flexible Learning and Care Solutions",
     description:
-      "Flexible Learning and Care Solutions provides safe, nurturing childcare in Kemah, TX for children ages 6 weeks to 12 years, including flexible, drop-in, evening, overnight, weekend, and 7-day care options.",
+      "Flexible Learning and Care Solutions provides safe, nurturing childcare in Kemah, TX for children ages 1 year to 12 years, including flexible, drop-in, evening, overnight, weekend, and 7-day care options.",
     keywords:
       "daycare in Kemah TX, childcare in Kemah TX, preschool in Kemah TX, infant care Kemah TX, toddler care Kemah TX, drop-in childcare Kemah TX, overnight childcare Kemah TX, weekend childcare Kemah TX, flexible childcare Kemah TX",
     path: "/",
@@ -95,7 +95,7 @@ export const heroSlides = [
   {
     eyebrow: "Flexible childcare in Kemah, TX",
     title: "Flexible childcare for modern family life.",
-    text: "Dependable childcare and learning programs for children ages 6 weeks to 12 years, with flexible care options for real family schedules.",
+    text: "Dependable childcare and learning programs for children ages 1 year to 12 years, with flexible care options for real family schedules.",
     image:
       "https://images.unsplash.com/photo-1544776193-352d25ca82cd?auto=format&fit=crop&w=1600&q=85",
   },
@@ -115,7 +115,7 @@ export const heroSlides = [
 ]
 
 export const trustItems = [
-  "Ages 6 Weeks - 12 Years",
+  "Ages 1 year - 12 Years",
   "Drop-In Care",
   "Evening Care",
   "Overnight Care",
@@ -130,7 +130,7 @@ export const programs = [
     id: "overnight-care",
     icon: HeartHandshake,
     title: "Overnight Care",
-    age: "Ages 6 Months - 12 Years",
+    age: "Ages 1 year - 12 Years",
     seoTitle: "Overnight Childcare in Kemah, TX",
     image: overnightCareImg,
     summary:
@@ -259,7 +259,7 @@ export const faqs = [
   {
     question: "What ages do you serve?",
     answer:
-      "We serve children from 6 weeks to 12 years old through infant care, toddler care, Pre-K programs, school-age care, summer camp, and flexible care options.",
+      "We serve children from 1 year to 12 years old through infant care, toddler care, Pre-K programs, school-age care, summer camp, and flexible care options.",
   },
   {
     question: "Do you offer drop-in childcare?",

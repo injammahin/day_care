@@ -73,7 +73,7 @@ const childcareSchema = {
   url: siteConfig.baseUrl,
   telephone: `+1-${siteConfig.phone}`,
   description:
-    "A family-owned childcare and learning center in Kemah, Texas serving children from 6 weeks to 12 years with flexible care options.",
+    "A family-owned childcare and learning center in Kemah, Texas serving children from 1 year to 12 years with flexible care options.",
   address: {
     "@type": "PostalAddress",
     streetAddress: siteConfig.streetAddress,
@@ -157,7 +157,7 @@ function Hero() {
 
           <p className="mt-6 max-w-xl text-[17px] leading-8 text-[#627689]">
             Flexible Learning and Care Solutions provides dependable childcare
-            and learning programs in Kemah, TX for children ages 6 weeks to 12
+            and learning programs in Kemah, TX for children ages 1 year to 12
             years, including flexible care options for real family schedules.
           </p>
 
@@ -188,7 +188,7 @@ function Hero() {
 
           <div className="mt-8 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4">
             {[
-              ["6mo-12y", "Age Range"],
+              ["1yr-12yrs", "Age Range"],
               ["7 Days", "Support"],
               ["Drop-In", "Option"],
               ["NCI", "Accepted"],
@@ -295,7 +295,7 @@ function ProgramsPreview() {
     {
       id: "overnight-care",
       title: "Overnight Care",
-      subtitle: "Ages 6 Months-12 Years",
+      subtitle: "Ages 1 year-12 Years",
       description:
         "Flexible Learning Solutions offers safe, nurturing overnight care for infants, toddlers, preschoolers, and school-age children. Whether parents work night shifts, extended hours, or simply need dependable care, children enjoy a comforting evening routine, supervised sleep, and a calm, home-like environment.",
       image: overnightCareImg,

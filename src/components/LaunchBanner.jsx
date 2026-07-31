@@ -41,7 +41,7 @@ export default function LaunchModal() {
 
                 <p className="mt-4 text-base leading-7 text-[#41576a]">
                     All other flexible learning options and drop-in care coming{" "}
-                    <span className="font-bold text-[#d8841f]">October 2026</span>.
+                    <span className="font-bold text-[#d8841f]">August 12th, 2026</span>.
                 </p>
 
                 <div className="mt-6 h-1.5 w-full overflow-hidden rounded-full bg-[#f2c98b]/30">

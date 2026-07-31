@@ -28,7 +28,7 @@ export default function Footer() {
 
             <p className="mt-5 max-w-sm text-sm leading-7 text-white/65">
               A family-owned childcare and learning center in Kemah, TX serving
-              children from 6 weeks to 12 years with flexible care options.
+              children from 1 year to 12 years with flexible care options.
             </p>
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">

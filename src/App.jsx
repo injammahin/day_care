@@ -11,6 +11,7 @@ import ProgramsPage from "@/pages/ProgramsPage"
 import TuitionPage from "@/pages/TuitionPage"
 import ContactPage from "@/pages/ContactPage"
 import LaunchBanner from "@/components/LaunchBanner"
+import TuitionRates from "@/pages/TuitionRates"
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/programs" element={<ProgramsPage />} />
+          <Route path="/tuition-rates" element={<TuitionRates />} /> 
           <Route path="/tuition" element={<TuitionPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>

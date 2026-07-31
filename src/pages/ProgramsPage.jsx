@@ -16,7 +16,7 @@ import { seoPages, siteConfig } from "@/data/siteData"
 const pagePrograms = [
   {
     id: "overnight-care",
-    age: "Ages 6 Months-12 Years",
+    age: "Ages 1 year-12 Years",
     title: "Overnight Care",
     summary:
       "Safe, nurturing overnight care for infants, toddlers, preschoolers, and school-age children.",
