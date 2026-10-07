@@ -18,7 +18,7 @@ export default function App() {
     <div className="min-h-screen bg-[#fffaf4] text-[#143047]">
       <ScrollToTop />
       <Header />
-      <LaunchBanner />
+      {/* <LaunchBanner /> */}
 
       <main>
         <Routes>
