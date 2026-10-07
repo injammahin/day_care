@@ -17,7 +17,7 @@ import { navItems, siteConfig } from "@/data/siteData"
 import { Button } from "@/components/ui/button"
 
 const ENROLLMENT_FORM_URL =
-  "https://schools.mybrightwheel.com/sign-in?redirect_path=forms/181f0acb-dcd0-4e1e-ba60-dcbd08e0d094/self-service"
+  "https://schools.mybrightwheel.com/sign-in?redirect_path=%2Fadmissions%2Fpacket%2Fd5e9cb6b-6b11-4a3b-a4a0-163272da0bc8%2Ffill%3Fschool_id%3Da510536f-353b-4fa1-9dd8-0faf867e1d96"
 
 const TUITION_NAV_ITEM = {
   label: "Tuition & Rates",
